@@ -1,13 +1,19 @@
 package com.sravs;
 
+import com.sravs.model.Employee;
+import com.sravs.repository.EmployeeRepo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EmployeeBackendApplication {
+public class EmployeeBackendApplication  {
 
 	public static void main(String[] args) {
 		SpringApplication.run(EmployeeBackendApplication.class, args);
 	}
+@Autowired
+private EmployeeRepo employeeRepo;
 
 }
